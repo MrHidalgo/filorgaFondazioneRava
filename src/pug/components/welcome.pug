@@ -1,0 +1,29 @@
+// SECTION :: START
+
+section#welcome.welcome
+  .welcome__wrapper
+    .welcome__wrapper-left
+
+      .welcomePart#welcomePart1
+        h1.welcome__title FILORGA SOSTIENE FONDAZIONE FRANCESCA RAVA
+        p.welcome__subtitle #DONNECHESUPPORTANOLEDONNE
+        p.welcome__desc la campagna solidale di Filorga per la prevenzione del tumore al collo dell’utero.
+
+      .welcomePart#welcomePart2
+        h1.welcome__title GRAZIE PER AVER ADERITO ALLA CAMPAGNA FILORGA
+        p.welcome__subtitle #DONNECHESUPPORTANOLEDONNE
+        p.welcome__heading!= "puoi prenotare il tuo PAP-test <strong>dal 4 al 10 aprile</strong> e puoi effettuarlo <strong>entro il 30 maggio.</strong>"
+        p.welcome__desc!= "Ti ricordiamo di <strong>conservare l’invito cartaceo</strong> ricevuto in farmacia riportante il codice univoco."
+
+    .welcome__wrapper-right
+      .welcomePart#welcomePart3
+        div
+        img(src="img/img-welcome-badge.png" srcset="img/img-welcome-badge@2x.png 2x" alt="")
+
+      .welcomePart#welcomePart4
+        p Solo con il tuo invito Filorga potrai:
+        span!= '<strong>PRENOTARE IL PAP-TEST:</strong> quando chiamerai il centro sanitario selezionato devi comunicare che hai ricevuto un invito Filorga in farmacia per effettuare un pap-test gratuito e dovrai fornire all’operatore il codice univoco riportato sull’invito'
+        span!= '<strong>RICEVERE IL TUO PAP-TEST GRATUITO:</strong> il giorno in cui effettuerai il PAP-TEST, porta con te l’invito cartaceo Filorga con codice univoco e consegnalo al centro sanitario selezionato'
+
+
+// SECTION :: END

@@ -1,5 +1,16 @@
 // HEADER :: START
 
-.header {}
+.header {
+  position: relative;
+  background-color: #000000;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
+
+  }
+}
 
 // HEADER :: END
