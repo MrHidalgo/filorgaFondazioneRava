@@ -16,10 +16,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include adaptive(767) {
+      flex-wrap: wrap;
+    }
 
     li {
       display: flex;
       align-items: flex-start;
+      @include adaptive(767) {
+        width: 100%;
+        max-width: 50%;
+
+        &:nth-of-type(odd) {
+          padding-right: 10px;
+        }
+        &:nth-of-type(even) {
+          padding-left: 10px;
+        }
+      }
 
       img {
         display: block;

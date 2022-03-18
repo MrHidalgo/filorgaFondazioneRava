@@ -6,6 +6,9 @@
   &__btn {
     display: flex;
     align-items: flex-start;
+    @include adaptive(767) {
+      max-width: 120px;
+    }
 
     img {
       display: block;

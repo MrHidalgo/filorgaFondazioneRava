@@ -238,6 +238,11 @@ picture {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media screen and (max-width: 767px) {
+  .logo__btn {
+    max-width: 120px;
+  }
+}
 .logo__btn img {
   display: block;
   max-width: 100%;
@@ -259,6 +264,11 @@ picture {
       -ms-flex-pack: center;
           justify-content: center;
   height: 86px;
+}
+@media screen and (max-width: 767px) {
+  .header__wrapper {
+    height: 70px;
+  }
 }
 
 .footer {
@@ -283,6 +293,12 @@ picture {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .footer__parther {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .footer__parther li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,6 +306,18 @@ picture {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+@media screen and (max-width: 767px) {
+  .footer__parther li {
+    width: 100%;
+    max-width: 50%;
+  }
+  .footer__parther li:nth-of-type(odd) {
+    padding-right: 10px;
+  }
+  .footer__parther li:nth-of-type(even) {
+    padding-left: 10px;
+  }
 }
 .footer__parther li img {
   display: block;
@@ -366,12 +394,25 @@ picture {
   display: flex;
   min-height: 343px;
 }
+@media screen and (max-width: 767px) {
+  .welcome__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .welcome__wrapper-left, .welcome__wrapper-right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   min-width: 1px;
   max-width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .welcome__wrapper-left, .welcome__wrapper-right {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
 }
 .welcome__wrapper-left {
   display: -webkit-box;
@@ -388,6 +429,12 @@ picture {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
+}
+@media screen and (max-width: 767px) {
+  .welcome__wrapper-left {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
 }
 .welcome__wrapper-right {
   position: relative;
@@ -407,9 +454,19 @@ picture {
 .welcome .welcomePart#welcomePart1 {
   max-width: 467px;
 }
+@media screen and (max-width: 767px) {
+  .welcome .welcomePart#welcomePart1 {
+    max-width: 100%;
+  }
+}
 .welcome .welcomePart#welcomePart2 {
   display: none;
   max-width: 613px;
+}
+@media screen and (max-width: 767px) {
+  .welcome .welcomePart#welcomePart2 {
+    max-width: 100%;
+  }
 }
 .welcome .welcomePart#welcomePart3 {
   position: absolute;
@@ -422,6 +479,11 @@ picture {
   background-position: center;
   background-size: cover;
 }
+@media screen and (max-width: 767px) {
+  .welcome .welcomePart#welcomePart3 {
+    position: relative;
+  }
+}
 .welcome .welcomePart#welcomePart3 > img {
   z-index: 2;
   position: relative;
@@ -431,6 +493,11 @@ picture {
      object-fit: contain;
   -o-object-position: center top;
      object-position: center top;
+}
+@media screen and (max-width: 767px) {
+  .welcome .welcomePart#welcomePart3 > img {
+    margin-bottom: 100px;
+  }
 }
 .welcome .welcomePart#welcomePart4 {
   display: none;
@@ -444,6 +511,15 @@ picture {
   background-repeat: no-repeat;
   background-position: right top;
   background-size: contain;
+}
+@media screen and (max-width: 767px) {
+  .welcome .welcomePart#welcomePart4 {
+    -webkit-transform: translateY(-25px);
+        -ms-transform: translateY(-25px);
+            transform: translateY(-25px);
+    max-width: calc(100% - 40px);
+    margin-bottom: 30px;
+  }
 }
 .welcome .welcomePart#welcomePart4 p {
   padding-bottom: 25px;

@@ -7,12 +7,18 @@
   &__wrapper {
     display: flex;
     min-height: 343px;
+    @include adaptive(767) {
+      flex-wrap: wrap;
+    }
 
     &-left,
     &-right {
       flex: 1;
       min-width: 1px;
       max-width: 100%;
+      @include adaptive(767) {
+        flex: 100%;
+      }
     }
 
     &-left {
@@ -21,6 +27,10 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
+      @include adaptive(767) {
+        padding-top: 55px;
+        padding-bottom: 55px;
+      }
     }
 
     &-right {
@@ -36,11 +46,17 @@
 
     &#welcomePart1 {
       max-width: 467px;
+      @include adaptive(767) {
+        max-width: 100%;
+      }
     }
 
     &#welcomePart2 {
       display: none;
       max-width: 613px;
+      @include adaptive(767) {
+        max-width: 100%;
+      }
     }
 
     &#welcomePart3 {
@@ -54,6 +70,9 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      @include adaptive(767) {
+        position: relative;
+      }
 
       > img {
         z-index: 2;
@@ -62,6 +81,9 @@
         height: auto;
         object-fit: contain;
         object-position: center top;
+        @include adaptive(767) {
+          margin-bottom: 100px;
+        }
       }
     }
 
@@ -77,6 +99,11 @@
       background-repeat: no-repeat;
       background-position: right top;
       background-size: contain;
+      @include adaptive(767) {
+        transform: translateY(-25px);
+        max-width: calc(100% - 40px);
+        margin-bottom: 30px;
+      }
 
       p {
         padding-bottom: 25px;
