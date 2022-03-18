@@ -103,6 +103,20 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
+
+  /* FORM 1 INPUT */
+
+  document.querySelector('[contentForm1-input-js]').addEventListener('input', function (ev) {
+    var el = ev.currentTarget;
+
+    if (el.value.length >= 8) {
+      el.nextElementSibling.style.opacity = '1';
+      document.querySelector('[contentForm1-btn-js]').classList.add('is-active');
+    } else {
+      el.nextElementSibling.style.opacity = '0';
+      document.querySelector('[contentForm1-btn-js]').classList.remove('is-active');
+    }
+  }, false);
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 
