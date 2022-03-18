@@ -1,0 +1,9 @@
+/// @include mixinFontFace("JournalRegular", "-Bold", "../fonts/", normal, otf eot woff2 woff ttf svg);
+/// ===============
+
+@include mixinFontFace("DINPro", "-Light", "../fonts/", 300, woff2 woff ttf svg);
+@include mixinFontFace("DINPro", "", "../fonts/", normal, woff2 woff ttf svg);
+@include mixinFontFace("DINPro", "-Medium", "../fonts/", 500, woff2 woff ttf svg);
+@include mixinFontFace("DINPro", "-Bold", "../fonts/", bold, woff2 woff ttf svg);
+@include mixinFontFace("DINPro", "-Black", "../fonts/", 900, woff2 woff ttf svg);
+
