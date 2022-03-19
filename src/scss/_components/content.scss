@@ -101,6 +101,12 @@
           letter-spacing: 0;
           color: #C4C4C4;
         }
+        @include adaptive(767) {
+          font-size: 24px;
+          @include inputPlaceholder {
+            font-size: 24px;
+          }
+        }
       }
 
       img {
@@ -151,10 +157,20 @@
         max-width: 844px;
         margin-left: auto;
         margin-right: auto;
+        @include adaptive(767) {
+          flex-wrap: wrap;
+        }
 
         > div {
           width: 100%;
           max-width: calc((100% - 30px) / 2);
+          @include adaptive(767) {
+            max-width: 100%;
+
+            & + div {
+              margin-top: 30px;
+            }
+          }
         }
       }
     }
