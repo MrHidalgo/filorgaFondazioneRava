@@ -25,4 +25,55 @@ section#content.content
 
     .content__wrapper.content__wrapper-2
 
+      form.content__form(action='' method='')
+        p.content__form-title HAI RICEVUTO UN INVITO PER EFFETTUARE UN PAP-TEST?
+        p.content__form-desc!= "Cerca la tua <span>regione</span> e verifica i centri sanitari aderenti. Selezionane massimo 5 da inviarti via email. "
+
+        label
+          input(type='text' name='' placeholder='inserisci la regione' minlength='2' required contentForm2-input1-js)
+          .content__form-dropdown
+            a(href="#") Lombardia
+
+        p.content__form-subtitle!= "Nella tua regione puoi rivolgerti ad uno dei seguenti centri e prenotare il tuo PAP-Test <span>entro il 10 aprile</span> chiamando il numero indicato per ciascun centro."
+
+        label(contentForm2-input2-js)
+          input(type='text' name='' placeholder='inserisci la Provincia' minlength='2' required)
+
+    .content__box-container
+      p.content__box-header!= "Puoi selezionìare ancora <span>0</span> <strong>centri</strong>"
+      .content__box-wrapper
+        each val, idx in [1,2,3,4,5,6,7,8,9,10,11,12]
+          div
+            a.content__box(href="#")
+              p.content__box-title MARIONNAUD
+              p.content__box-desc C.C. ANTEGNATE VIA DEL COMMERCIO 3 ( S.S. 11 VIA PER MILANO), 13011 ANTEGNATE
+              p.content__box-num 02 123456789
+
+      .content__box-btn
+        a(href="#") Carica altro
+
+    .content__wrapper.content__wrapper-2
+      .content__mail
+        form.content__mail-form(action='' method='')
+          p.content__form-title Inserisci il tuo indirizzo mail per ricevere informazioni
+
+          label
+            input(type='email' name='' placeholder='inserisci la tua mail' required)
+
+          label
+            input(type='checkbox')
+            i
+            span!= "Ho letto la <a href='#'><u>Privacy Policy</u></a> e presto il consenso al trattamento dei dati in conformità con il regolamento europeo 2016/679 GDPR"
+
+          label
+            input(type='checkbox')
+            i
+            span Presto  il consenso al trattamento dei miei dati personali per finalità promozionali e di marketing, incluse le comunicazioni commerciali, effettuato anche con ricorso a strumenti automatizzati di contatto quali la posta elettronica, il telefax e i messaggi di tipo mms o sms, social network.
+
+          button.content__form-btn(type='button' disabled) INVIA
+
+        p.content__mail-info
+          img(src="img/img-mail-info.svg" alt="")
+          span!= "<strong>Ricordati:</strong> Una volta inviata l’email, il codice non potrà più essere utilizzato."
+
 // SECTION :: END
