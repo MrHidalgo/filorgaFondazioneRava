@@ -7,7 +7,8 @@
   &__wrapper {
     width: 100%;
 
-    &-2 {
+    &-2,
+    &-3 {
       display: none;
       max-width: 626px;
       margin-left: auto;
@@ -283,6 +284,7 @@
   }
 
   &__mail {
+
     .content__form-btn {
       opacity: 1;
       visibility: visible;
@@ -372,6 +374,9 @@
       align-items: center;
       justify-content: center;
       padding-top: 15px;
+      @include adaptive(767) {
+        justify-content: flex-start;
+      }
 
       img {
         display: block;
@@ -385,6 +390,9 @@
         line-height: 16px;
         text-align: center;
         color: #FFFFFF;
+        @include adaptive(767) {
+          text-align: left;
+        }
 
         strong {
           font-weight: 700;
@@ -463,6 +471,12 @@
         max-width: calc(100% / 4);
         padding-left: 30px;
         padding-bottom: 30px;
+        @include adaptive(1023) {
+          max-width: calc(100% / 3);
+        }
+        @include adaptive(767) {
+          max-width: 100%;
+        }
       }
     }
 

@@ -587,19 +587,19 @@ picture {
 .content__wrapper {
   width: 100%;
 }
-.content__wrapper-2 {
+.content__wrapper-2, .content__wrapper-3 {
   display: none;
   max-width: 626px;
   margin-left: auto;
   margin-right: auto;
 }
-.content__wrapper-2 .content__form {
+.content__wrapper-2 .content__form, .content__wrapper-3 .content__form {
   margin-bottom: 60px;
 }
-.content__wrapper-2 .content__form .content__form-subtitle + label {
+.content__wrapper-2 .content__form .content__form-subtitle + label, .content__wrapper-3 .content__form .content__form-subtitle + label {
   margin-top: 30px;
 }
-.content__wrapper-2 .content__form [contentForm2-input2-js] {
+.content__wrapper-2 .content__form [contentForm2-input2-js], .content__wrapper-3 .content__form [contentForm2-input2-js] {
   display: none;
 }
 .content__form {
@@ -1066,6 +1066,13 @@ picture {
           justify-content: center;
   padding-top: 15px;
 }
+@media screen and (max-width: 767px) {
+  .content__mail-info {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 .content__mail-info img {
   display: block;
   max-width: 100%;
@@ -1077,6 +1084,11 @@ picture {
   line-height: 16px;
   text-align: center;
   color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .content__mail-info span {
+    text-align: left;
+  }
 }
 .content__mail-info span strong {
   font-weight: 700;
@@ -1173,6 +1185,16 @@ picture {
   max-width: 25%;
   padding-left: 30px;
   padding-bottom: 30px;
+}
+@media screen and (max-width: 1023px) {
+  .content__box-wrapper > div {
+    max-width: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .content__box-wrapper > div {
+    max-width: 100%;
+  }
 }
 .content__box-title {
   padding-bottom: 5px;
