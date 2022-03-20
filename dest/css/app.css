@@ -215,6 +215,8 @@ picture {
   font-size: 14px;
   line-height: 26px;
   text-align: center;
+}
+.copyright a {
   color: #C4C4C4;
 }
 
@@ -836,6 +838,7 @@ picture {
 }
 @media screen and (max-width: 767px) {
   .content__form label input {
+    padding: 0 40px;
     font-size: 24px;
   }
   .content__form label input.placeholder {
@@ -868,6 +871,12 @@ picture {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .content__form label img {
+    right: 10px;
+    max-width: 20px;
+  }
 }
 .content__invitation {
   display: -webkit-box;
@@ -1014,6 +1023,12 @@ picture {
   text-align: center;
   text-transform: uppercase;
   color: #C4C4C4;
+}
+@media screen and (max-width: 767px) {
+  .content__mail label input[type=text],
+.content__mail label input[type=email] {
+    padding: 0 40px;
+  }
 }
 .content__mail label input[type=checkbox] {
   outline: none;

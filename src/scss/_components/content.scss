@@ -209,6 +209,7 @@
           color: #C4C4C4;
         }
         @include adaptive(767) {
+          padding: 0 40px;
           font-size: 24px;
           @include inputPlaceholder {
             font-size: 24px;
@@ -226,6 +227,10 @@
         max-width: 100%;
         height: auto;
         @include transition(opacity);
+        @include adaptive(767) {
+          right: 10px;
+          max-width: 20px;
+        }
       }
     }
   }
@@ -326,6 +331,9 @@
           text-align: center;
           text-transform: uppercase;
           color: #C4C4C4;
+        }
+        @include adaptive(767) {
+          padding: 0 40px;
         }
       }
 
