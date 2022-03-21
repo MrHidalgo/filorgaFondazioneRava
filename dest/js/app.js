@@ -179,11 +179,20 @@ window.addEventListener('load', function (ev) {
   * ============================== */
 
 
+  var count = 5;
   document.addEventListener('click', function (ev) {
     if (ev.target.closest('.content__box')) {
       var el = ev.target.closest('.content__box');
-      el.classList.toggle('is-active');
-      document.querySelector('.content__box-header span').innerText = document.querySelectorAll('.content__box.is-active').length;
+
+      if (el.classList.contains('is-active')) {
+        el.classList.remove('is-active');
+        document.querySelector('.content__box-header span').innerText = ++count;
+      } else {
+        if (count !== 0) {
+          el.classList.add('is-active');
+          document.querySelector('.content__box-header span').innerText = --count;
+        }
+      }
 
       if (document.querySelectorAll('.content__box.is-active').length >= 1) {
         document.querySelector('.content__wrapper-3').style.display = 'block';

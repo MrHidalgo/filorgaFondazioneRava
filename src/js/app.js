@@ -91,13 +91,22 @@ window.addEventListener('load', (ev) => {
 
   /* BOX TOGGLE
   * ============================== */
+  let count = 5;
   document.addEventListener('click', (ev) => {
     if(ev.target.closest('.content__box')) {
       const el = ev.target.closest('.content__box');
 
-      el.classList.toggle('is-active');
+      if(el.classList.contains('is-active')) {
+        el.classList.remove('is-active');
 
-      document.querySelector('.content__box-header span').innerText = document.querySelectorAll('.content__box.is-active').length;
+        document.querySelector('.content__box-header span').innerText = ++count;
+      } else {
+        if(count !== 0) {
+          el.classList.add('is-active');
+
+          document.querySelector('.content__box-header span').innerText = --count;
+        }
+      }
 
       if(document.querySelectorAll('.content__box.is-active').length >= 1) {
         document.querySelector('.content__wrapper-3').style.display = 'block';

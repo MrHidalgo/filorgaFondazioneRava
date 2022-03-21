@@ -289,7 +289,6 @@
   }
 
   &__mail {
-
     .content__form-btn {
       opacity: 1;
       visibility: visible;
@@ -346,7 +345,7 @@
 
         &:checked {
           & + i {
-            background-color: #ffffff;
+            background-color: transparent;
             @include transition(background-color);
           }
         }
@@ -360,7 +359,7 @@
           border: 4px solid #fff;
           border-radius: 0;
           box-shadow: none;
-          background-color: transparent;
+          background-color: #fff;
           @include transition(background-color);
 
           & + span {
