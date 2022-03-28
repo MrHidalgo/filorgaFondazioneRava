@@ -1,0 +1,50 @@
+// SECTION :: START
+
+.lp {
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  &__title {
+    width: 100%;
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #EDAB93;
+  }
+
+  &__visual {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    min-height: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 4px solid #edab93;
+    border-bottom: 4px solid #edab93;
+    background-color: #edab93;
+    background-image: url('../img/img-welcome-bg@2x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include adaptive(767) {
+      min-height: 165px;
+    }
+
+    > img {
+      z-index: 2;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center top;
+    }
+  }
+}
+
+// SECTION :: END
